@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { Film } from '../../model/Film';
 import { FilmService } from '../../service/film.service';
 
@@ -15,7 +16,8 @@ export class IndexComponent implements OnInit {
   chemin:string;
 
   constructor(private formBuilder: FormBuilder,
-    private FilmService:FilmService) { }
+    private FilmService:FilmService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.userForm = this.formBuilder.group({
@@ -38,6 +40,13 @@ export class IndexComponent implements OnInit {
       }
     )
     
+  }
+
+
+  showDetails(){
+
+    localStorage.setItem("film",JSON.stringify(this.film));
+    this.router.navigate(["details"]);
   }
 
 }
