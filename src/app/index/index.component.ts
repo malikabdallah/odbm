@@ -14,6 +14,7 @@ export class IndexComponent implements OnInit {
   userForm: FormGroup;
   film:Film;
   chemin:string;
+  erreur:string;
 
   constructor(private formBuilder: FormBuilder,
     private FilmService:FilmService,
@@ -37,7 +38,11 @@ export class IndexComponent implements OnInit {
       data=>{
         this.film=data;
         this.chemin=this.film.Poster;
-      }
+        if(this.erreur!=null){
+          this.erreur=null;
+        }
+      },
+      err =>this.erreur=err
     )
     
   }
