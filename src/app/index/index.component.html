@@ -1,36 +1,39 @@
 <div id="absoluteCenteredDiv">
-<div class="box">
-<div class="col-sm-8 col-sm-offset-2">
-    <h1> ODBM API ANGULAR</h1>
-    <form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
-      <div class="form-group">
-        <input type="text" id="apyKey" placeholder="entrer votre clef" class="form-control" formControlName="apiKey">
-      </div>
-      <div class="form-group">
-        <input  type="text" id="title" placeholder="entrer votre titre" class="form-control" formControlName="title">
-      </div>
-   
+  <div class="box">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h1> ODBM API ANGULAR</h1>
+      <form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+        <div class="form-group">
+          <input type="text" id="apyKey" placeholder="entrer votre clef" class="form-control" formControlName="apiKey">
+        </div>
+        <div class="form-group">
+          <input  type="text" id="title" placeholder="entrer votre titre" class="form-control" formControlName="title">
+        </div>
     
-      <button  class="button"  type="submit">Soumettre</button>
-     
-    </form>
-  </div>
-
-  <div *ngIf="film">
-
-    <div>
-        titre : {{film.Title}}
-    </div>
-    <div>
-
-        year: {{film.Year}}
-    </div>
-    <div>
-        <img [src]="chemin"/>
+      
+        <button  class="button"  type="submit">Soumettre</button>
+      
+      </form>
     </div>
 
-    <button (click)=showDetails()>details</button>
+  <div>
+    <div *ngIf="film">
 
-  </div>
-  </div>
+      <div>
+          titre : {{film.Title}}
+      </div>
+      <div>
+  
+          year: {{film.Year}}
+      </div>
+      <div>
+          <img [src]="chemin"/>
+      </div>
+  
+      <button (click)=showDetails()>details</button>
+  
+    </div>
+   </div> 
+  
+
 </div>

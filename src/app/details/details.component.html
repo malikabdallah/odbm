@@ -1,4 +1,5 @@
-
+<div id="absoluteCenteredDiv">
+    <div class="box">
     <div>
         titre : {{film.Title}}
     </div>
@@ -6,45 +7,71 @@
 
         year: {{film.Year}}
     </div>
+    <br/>
+
     <div>
         <img [src]="chemin"/>
     </div>
+    <br/>
+
 
     <div>
         date de sortie: {{film.Released}}
     </div>
+    <br/>
+
     <div>
         duree:{{film.Runtime}}
     </div>
+    <br/>
+
     <div>
         genre:{{film.Genre}}
     </div>
+    <br/>
+
     <div>
         Director:{{film.Director}}
     </div>
+    <br/>
+
     <div>
         scenariste:{{film.Writer}}
     </div>
+    <br/>
+
     <div>
         acteurs:{{film.Actors}}
     </div>
+    <br/>
     <div>
         scenario: {{film.Plot}}
     </div>
+    <br/>
+
     <div>
         langue:{{film.Language}}
     </div>
+    <br/>
+
     <div>
         pays:{{film.Country}}
     </div>
+    <br/>
+
     <div>
         type:{{film.Type}}
     </div>
+    <br/>
+
     <div>
         box office: {{film.BoxOffice}}
     </div>
+    <br/>
 
     <button (click)="goback()">
         retour
     </button>
+    </div>
+</div>
     
