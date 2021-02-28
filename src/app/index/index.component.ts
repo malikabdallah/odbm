@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Route, Router } from '@angular/router';
-import { Film } from '../../model/Film';
-import { FilmService } from '../../service/film.service';
+import { Film } from '../model/Film';
+import { FilmService } from '../service/film.service';
 
 @Component({
   selector: 'app-index',

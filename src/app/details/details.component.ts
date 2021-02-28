@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Film } from '../model/Film';
 
 @Component({
@@ -10,11 +11,14 @@ export class DetailsComponent implements OnInit {
 
   public film:Film;
   public chemin:string;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     this.film=JSON.parse(localStorage.getItem("film"));
     this.chemin=this.film.Poster;
   }
 
+  goback(){
+this.router.navigate([""]);
+  }
 }
