@@ -13,3 +13,19 @@
       <button type="submit" class="btn btn-primary">Soumettre</button>
     </form>
   </div>
+
+  <div *ngIf="film">
+
+    <div>
+        titre : {{film.Title}}
+    </div>
+    <div>
+
+        year: {{film.Year}}
+    </div>
+    <div>
+        <img [src]="chemin"/>
+    </div>
+
+
+  </div>

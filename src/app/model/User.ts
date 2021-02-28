@@ -1,6 +1,6 @@
-export interface User {
+export class User {
 
-        apiKey:string,
+    apiKey:string;
         title:string
     
 }
